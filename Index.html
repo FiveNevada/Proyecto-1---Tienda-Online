@@ -6,12 +6,14 @@
     <script src="https://kit.fontawesome.com/bf924a6af6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="CSS/Index.CSS">
     <link rel="stylesheet" href="CSS/Inicio.CSS">
+    <link rel="stylesheet" href="CSS/Footer.CSS">
     <title>Mens's Clothes</title>
 </head>
 <body>
     <header>
         <a href="" class="Logo"> <i class="fa-brands fa-vimeo-v"></i> VANS</a>
 
+        <!-- MENU TEXTO -->
         <ul class="Menu">
             <li><a href="#Inicio">Inicio</a></li>
             <li><a href="#Nuevo">Nuevo</a></li>
@@ -19,6 +21,7 @@
             <li><a href="#Reviews">Comentarios</a></li>
         </ul>
 
+        <!--  ICONOS MENU -->
         <div class="Iconos">
             <i class="fa-solid fa-bars" id="Icono-Menu"></i>
             <i class="fa-solid fa-magnifying-glass" id="Icono-Buscar"></i>
@@ -26,6 +29,7 @@
             <i class="fa-regular fa-user" id="Icono-Usuario"></i>
         </div>
 
+        <!--  BUSCAR -->
         <div class="Buscar">
             <input type="search" name="" id="" placeholder="Buscas algo?">
         </div>
@@ -70,19 +74,96 @@
             <p>No tienes una cuenta? <a href="#">Crea una</a></p>
         </div>
 
-        <script src="Java/Index.JS"></script>
+
     </header>
 
+    <!-- INICIO -->
     <section class="Inicio" id="Inicio">
         <div class="Inicio-Texto">
-            <span>Comprar Ahora</span>
+            <span>Descubre</span>
             <h1>Nuevas Tendencias de <br>Skate Shoes</h1>
             <a href="#" class="Boton">Comprar Ahora</a>
         </div>
         <div class="Inicio-Imagen">
             <img src="Images/Vans.png" alt="">
         </div>
-
     </section>
+
+    <!-- SECCION NUEVOS PRODUCTOS -->
+    <section class="Nuevo" id="Nuevo">
+        <div class="Encabezado">
+            <ul class="Menu">
+                <li><a href="#Inicio">Skate</a></li>
+                <li><a href="#Nuevo">Básicos</a></li>
+                <li><a href="#Productos">Rebajas</a></li>
+            </ul>
+        </div>
+
+        <div class="Articulos">
+            <div class="flex-container">
+                <div class="flex-item">1</div>
+                <div class="flex-item">2</div>
+                <div class="flex-item">3</div>
+                <div class="flex-item">4</div>
+            </div>
+            <div class="flex-container">
+                <div class="flex-item">1</div>
+                <div class="flex-item">2</div>
+                <div class="flex-item">3</div>
+                <div class="flex-item">4</div>
+            </div>
+            <div class="flex-container">
+                <div class="flex-item">1</div>
+                <div class="flex-item">2</div>
+                <div class="flex-item">3</div>
+                <div class="flex-item">4</div>
+            </div>
+        </div>
+    </section>
+
+    <footer  id="Contacto" class="Contacto">
+        <div class="Contacto-Informacion">
+            <div class="Row">
+                <div class="Col">
+                    <h4>Compañia</h4>
+                    <ul>
+                        <li><a href="#">Acerca de</a></li>
+                        <li><a href="#">Nuestros servicios</a></li>
+                        <li><a href="#">Politica de privacidad</a></li>
+                        <li><a href="#">Programa de afiliados</a></li>
+                    </ul>
+                </div>
+                <div class="Col">
+                    <h4>Ayuda</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Envios</a></li>
+                        <li><a href="#">Devoluciones</a></li>
+                        <li><a href="#">Estado de orden</a></li>
+                        <li><a href="#">Opciones de pago</a></li>
+                    </ul>
+                </div>
+                <div class="Col">
+                    <h4>Tienda</h4>
+                    <ul>
+                        <li><a href="#">Skate</a></li>
+                        <li><a href="#">Básicos</a></li>
+                        <li><a href="#">Rebajas</a></li>
+                        <li><a href="#">Niños</a></li>
+                    </ul>
+                </div>
+                <div class="Col">
+                    <h4>Siguenos en Redes</h4>
+                    <div class="Redes">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="Java/Index.JS"></script>
 </body>
 </html>
