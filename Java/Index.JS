@@ -2,6 +2,7 @@ let Buscar = document.querySelector('.Buscar');
 let Carrito = document.querySelector('.Carrito');
 let Usuario = document.querySelector('.Usuario');
 
+
 document.querySelector('#Icono-Buscar').onclick = () => {
     Buscar.classList.toggle('active');
     Carrito.classList.remove('active');
@@ -19,3 +20,49 @@ document.querySelector('#Icono-Usuario').onclick = () => {
     Buscar.classList.remove('active');
     Carrito.classList.remove('active');
 }
+
+
+let thisPage = 1;
+let limite = 6;
+let lista = document.querySelectorAll('.list .Producto');
+
+function CargarProducto() {
+    let beginGet = limite * (thisPage - 1);
+    let endGet = limite * thisPage - 1;
+    
+    lista.forEach((Producto, key) => {
+        if (key >= beginGet && key <= endGet) {
+            Producto.style.display = 'block';
+        } else {
+            Producto.style.display = 'none';
+        }
+    });
+    
+    ListarPagina();
+}
+
+CargarProducto();
+
+function ListarPagina() {
+    let options = ['Skate', 'Básicos', 'Rebajas']; 
+    let menuContainer = document.querySelector('.Nuevo .Encabezado .Menu'); 
+
+    menuContainer.innerHTML = '';
+
+    for (let i = 0; i < options.length; i++) {
+        let menuItem = document.createElement('li');
+        menuItem.innerText = options[i];
+        menuItem.style.cursor = 'pointer';
+        if (i + 1 === thisPage) {
+            menuItem.classList.add('Activa');
+        }
+        menuItem.setAttribute('onclick', "CambiarPagina(" + (i + 1) + ")");
+        menuContainer.appendChild(menuItem);
+    }
+}
+
+function CambiarPagina(i) {
+    thisPage = i;
+    CargarProducto();
+}
+
