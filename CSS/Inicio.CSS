@@ -49,12 +49,13 @@
 }
 
 .list .Imagenes img{
-    height: 300px;
+    width: 200px;
+    height: 200px;
     transition: 0.5s;
 }
 
 .list .Imagenes {
-    background-image: linear-gradient(to top right, #D89CD1, #D499D4);
+    background-image: linear-gradient(to top right, #B6BBC4, #F0ECE5);
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -87,15 +88,23 @@
 }
 
 .Producto .Info-Producto .Agregar{
-    background-color: #B192EF;
+    background-color: var(--main-color);
+    color: var(--bg-color);
     padding: 20px;
     width: 100%;
     border: none;
     border-radius: 30px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
     cursor: pointer;
 }
 
-.Producto:hover img {
+.Producto .Info-Producto .Agregar:hover{
+    background: var(--text-color);
+}
+
+.Nuevo .Articulos .Producto:hover img {
     transform: translate(0, -50px);
 }
 
@@ -106,4 +115,31 @@
 
 .Encabezado .Menu li:hover {
     color: var(--main-color);  /* Cambia a tu color hover deseado */
+}
+
+@media(max-width: 960px) {
+    .Articulos .list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .Articulos .list .Producto{
+        width: 70%;
+
+    }
+    .Articulos .list .Producto img{
+        width: 190px;
+        height: 180px;
+    }
+}
+
+@media(max-width: 620px) {
+    .list .Info-Producto{
+        margin-top: 10px;
+    }
+
+    .Articulos .list .Producto img{
+        width: 150px;
+        height: 150px;
+    }
 }

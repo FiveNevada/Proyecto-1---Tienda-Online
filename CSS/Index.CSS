@@ -59,6 +59,11 @@ header {
     transition: 0.5s linear;
 }
 
+header.shadow {
+    background: var(--bg-color);
+    box-shadow: 0 0 4px rgb(14, 55, 54 / 15%);
+}
+
 .Logo {
     display: flex;
     align-items: center;
@@ -213,4 +218,72 @@ header {
 .Usuario.active {
     right: 1rem;
     transition: 0.2s;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1058px) {
+    header {
+        padding: 18px 60px;
+    }
+    section {
+        padding: 50px 60px;
+    }
+    .Inicio .Inicio-Texto h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 991px) {
+    header {
+        padding: 18px 4%;
+    }
+    section {
+        padding: 50px 4%;
+    }
+    .Inicio .Inicio-Texto h1 {
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 12px 4%;
+    }
+    #Icono-Menu {
+        display: initial;
+    }
+    header .Menu{
+        position: absolute;
+        width: 240px;
+        height: 100vh;
+        top: 100%;
+        right: -100%;
+        display: flex;
+        flex-direction: column;
+        background: var(--bg-color);
+        row-gap: 1.4rem;
+        padding: 20px;
+        box-shadow: 4px 4px 0 4px rgb(14 55 54 / 15%);
+        transition: 0.2s linear;
+        text-align: left;
+    }
+    .Menu.active {
+        right: 0;
+    }
+    .Inicio .Inicio-Texto h1  {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .Inicio .Inicio-Texto span{
+        font-size: 0.8rem;
+    }
+    .Inicio .Inicio-Texto h1 {
+        font-size: 1.7rem;
+    }
+
+    .Carrito img{
+        width: 77px;
+    }
 }

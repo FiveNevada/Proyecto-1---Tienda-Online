@@ -1,27 +1,50 @@
 let Buscar = document.querySelector('.Buscar');
 let Carrito = document.querySelector('.Carrito');
 let Usuario = document.querySelector('.Usuario');
+let header = document.querySelector('header');
+let Menu = document.querySelector('.Menu');
 
-
+// MENU
 document.querySelector('#Icono-Buscar').onclick = () => {
     Buscar.classList.toggle('active');
     Carrito.classList.remove('active');
     Usuario.classList.remove('active');
+    Menu.classList.remove('active');
 }
 
 document.querySelector('#Icono-Carro').onclick = () => {
     Carrito.classList.toggle('active');
     Buscar.classList.remove('active');
     Usuario.classList.remove('active');
+    Menu.classList.remove('active');
 }
 
 document.querySelector('#Icono-Usuario').onclick = () => {
     Usuario.classList.toggle('active');
     Buscar.classList.remove('active');
     Carrito.classList.remove('active');
+    Menu.classList.remove('active');
 }
 
+document.querySelector('#Icono-Menu').onclick = () => {
+    Menu.classList.toggle('active');
+    Buscar.classList.remove('active');
+    Carrito.classList.remove('active');
+    Usuario.classList.remove('active');
+}
 
+window.onscroll = () => {
+    Buscar.classList.remove('active');
+    Carrito.classList.remove('active');
+    Usuario.classList.remove('active');
+    Menu.classList.remove('active');
+}
+
+window.addEventListener('scroll', () => {
+    header.classList.toggle('shadow', window.scrollY > 0);
+});
+
+// PAGINACION
 let thisPage = 1;
 let limite = 6;
 let lista = document.querySelectorAll('.list .Producto');

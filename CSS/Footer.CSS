@@ -92,15 +92,26 @@ ul {
 }
 
 @media(max-width: 767px){
+    .Row {
+        margin-left: 20px;
+    }
+
     .Col {
         width: 50%;
         margin-bottom: 30px;
+        padding: 10px 0;
     }
 }
 
 @media(max-width: 574px){
+    .Row {
+        margin-left: 20px;
+    }
+
     .Col {
         width: 100%;
+        margin-bottom: 30px;
+        padding: 10px 0;
     }
 }
 
